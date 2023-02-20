@@ -6,6 +6,7 @@ public class Prizes {
 
     private String year;
     private String category;
+    private String overallMotivation;
     private List<Laureates> laureates;
 
     public void setYear(String year) {
@@ -30,5 +31,13 @@ public class Prizes {
 
     public List<Laureates> getLaureates() {
         return laureates;
+    }
+
+    public String getOverallMotivation() {
+        return overallMotivation;
+    }
+
+    public void setOverallMotivation(String overallMotivation) {
+        this.overallMotivation = overallMotivation;
     }
 }
