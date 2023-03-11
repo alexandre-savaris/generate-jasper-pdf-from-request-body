@@ -2,12 +2,15 @@ package org.alexandresavaris.beans;
 
 import java.util.List;
 
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+
 public class Prizes {
 
     private String year;
     private String category;
     private String overallMotivation;
     private List<Laureates> laureates;
+    private JRBeanCollectionDataSource laureatesDataSource;
 
     public void setYear(String year) {
         this.year = year;
@@ -39,5 +42,14 @@ public class Prizes {
 
     public void setOverallMotivation(String overallMotivation) {
         this.overallMotivation = overallMotivation;
+    }
+
+    public JRBeanCollectionDataSource getLaureatesDataSource() {
+        this.laureatesDataSource = new JRBeanCollectionDataSource(laureates, false);
+        return laureatesDataSource;
+    }
+
+    public void setLaureatesDataSource(JRBeanCollectionDataSource laureatesDataSource) {
+        this.laureatesDataSource = laureatesDataSource;
     }
 }

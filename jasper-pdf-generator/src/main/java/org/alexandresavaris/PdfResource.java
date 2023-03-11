@@ -33,7 +33,7 @@ public class PdfResource {
         // The PDF content to be returned to the client.
         byte[] pdfContent = null;
 
-        // Mapping the JSON received on request body to JavaBeans.
+        // Mapping the JSON received in the request body to JavaBeans.
         JsonRootBean jsonRootBean = jsonObject.mapTo(JsonRootBean.class);
 
         // Retrieving the JasperReports template.

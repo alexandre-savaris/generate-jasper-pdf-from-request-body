@@ -2,6 +2,11 @@
 <!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="nobel" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="05e2a18d-5db9-417f-b50d-f94e40e7fbcb">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset1" uuid="c98154c5-9313-4302-a404-439dab8e476c">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -21,25 +26,57 @@
 		<band height="61" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="48" splitType="Stretch">
+		<band height="129" splitType="Stretch">
 			<textField isBlankWhenNull="true">
-				<reportElement x="0" y="0" width="50" height="20" uuid="1cc45e20-8a22-4a1f-8d91-5f612ed8d2da">
+				<reportElement key="" x="28" y="0" width="28" height="14" uuid="1cc45e20-8a22-4a1f-8d91-5f612ed8d2da">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a33432f-049a-4563-9918-9695b2cb36fe"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement x="54" y="0" width="500" height="20" uuid="4505dbaa-feb3-421a-aaec-8568230a7b56">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement x="110" y="0" width="444" height="14" isPrintWhenDetailOverflows="true" uuid="4505dbaa-feb3-421a-aaec-8568230a7b56">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7878b977-b413-4160-950f-11dd67fa3119"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement x="0" y="24" width="554" height="18" isRemoveLineWhenBlank="true" uuid="583697dd-1e87-4fc6-acdb-5fede2c5c83d">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement x="94" y="17" width="460" height="14" isRemoveLineWhenBlank="true" uuid="583697dd-1e87-4fc6-acdb-5fede2c5c83d">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0e078e1a-d852-4d29-9c39-ca6ffe96baee"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{overallMotivation}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="28" height="14" uuid="f0d1612e-d391-477f-b0ad-422420b79104">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="50" height="14" uuid="5b0ce3d4-9e20-4a60-b74a-3c31739eea94">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="17" width="94" height="14" uuid="aa4e61bd-a06e-4408-a94a-6b68dd92bfcd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Overall motivation:]]></text>
+			</staticText>
 		</band>
 	</detail>
 	<columnFooter>
