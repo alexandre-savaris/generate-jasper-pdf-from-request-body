@@ -10,6 +10,7 @@ public class Prizes {
     private String category;
     private String overallMotivation;
     private List<Laureates> laureates;
+    // This is the tricky part: each prize has a list of laureates, which is exported as a datasource to be accessed by the report template at runtime.
     private JRBeanCollectionDataSource laureatesDataSource;
 
     public void setYear(String year) {
@@ -45,6 +46,7 @@ public class Prizes {
     }
 
     public JRBeanCollectionDataSource getLaureatesDataSource() {
+        // Generates the datasource and returns it populated with laureates' data.
         this.laureatesDataSource = new JRBeanCollectionDataSource(laureates, false);
         return laureatesDataSource;
     }
